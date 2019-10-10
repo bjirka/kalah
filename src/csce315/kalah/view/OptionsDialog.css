@@ -1,0 +1,7 @@
+.connection-attempting{
+	-fx-font-style: italic;
+}
+
+.connection-successful{
+	-fx-font-weight: bold;
+}

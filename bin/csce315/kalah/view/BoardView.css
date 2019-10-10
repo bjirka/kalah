@@ -1,0 +1,35 @@
+.player-pit-label{
+	-fx-font-size: 24px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #ffffff;
+}
+
+.end-pit-label{
+	-fx-font-size: 36px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #ffffff;
+}
+
+.info-bar-label{
+	-fx-font-size: 30px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #ffffff;
+}
+
+.pit-plus-one{
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-font-size: 64px;
+}
+
+.winner-message{
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-font-size: 80px;
+}
+
+.general-message{
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-font-size: 35px;
+}

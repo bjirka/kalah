@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Integer?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="395.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csce315.kalah.view.OptionsDialogController">
+   <children>
+      <GridPane hgap="10.0" layoutX="150.0" layoutY="205.0" vgap="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="237.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="237.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Red Player :" GridPane.halignment="RIGHT" />
+            <ComboBox fx:id="player0Type" prefWidth="150.0" GridPane.columnIndex="1">
+            	<items>
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Human" />
+            			<String fx:value="AI" />
+            			<String fx:value="Remote Client" />
+            		</FXCollections>
+            	</items>
+            </ComboBox>
+            <Label fx:id="player0Subtext" text="Connecting . . ." GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Blue Player :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <ComboBox fx:id="player1Type" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            	<items>
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Human" />
+            			<String fx:value="AI" />
+            			<String fx:value="Remote Client" />
+            		</FXCollections>
+            	</items>
+            </ComboBox>
+            <Label fx:id="player1Subtext" text="Connecting . . ." GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Label text="Starting Pits Per Player :" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <ComboBox fx:id="numPlayerPits" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            	<items>
+            		<FXCollections fx:factory="observableArrayList">
+            			<Integer fx:value="4" />
+            			<Integer fx:value="5" />
+            			<Integer fx:value="6" />
+            			<Integer fx:value="7" />
+            			<Integer fx:value="8" />
+            			<Integer fx:value="9" />
+            		</FXCollections>
+            	</items>
+            </ComboBox>
+            <Label text="Stones Per Pit :" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <ComboBox fx:id="numStones" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            	<items>
+            		<FXCollections fx:factory="observableArrayList">
+            			<Integer fx:value="1" />
+            			<Integer fx:value="2" />
+            			<Integer fx:value="3" />
+            			<Integer fx:value="4" />
+            			<Integer fx:value="5" />
+            			<Integer fx:value="6" />
+            			<Integer fx:value="7" />
+            			<Integer fx:value="8" />
+            			<Integer fx:value="9" />
+            			<Integer fx:value="10" />
+            		</FXCollections>
+            	</items>
+            </ComboBox>
+            <Label text="Random Stone Distribution :" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <CheckBox fx:id="isRandomStones" mnemonicParsing="false" prefHeight="21.0" prefWidth="150.0" text="Disabled" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <Label text="Time Limit Per Move :" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Slider fx:id="timer" majorTickUnit="20.0" max="60.0" maxWidth="150.0" minorTickCount="5" prefHeight="40.0" prefWidth="150.0" showTickLabels="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+            <Label fx:id="timerLabel" text="Unlimited" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+      <Button layoutX="14.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleClientMode" text="Client Mode..." AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" />
+      <ButtonBar layoutX="210.0" layoutY="446.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="8.0">
+        <buttons>
+          <Button fx:id="okButton" defaultButton="true" mnemonicParsing="false" onAction="#handleOK" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
